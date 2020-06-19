@@ -16,12 +16,13 @@ description:
    decompiling of the script assembly, and continuously merges changes downstream.
 
    The advantage this library has over Haskoin is that it uses very few
-   dependencies and doesn't rely on external libraries such as LevelDB and snappy.            
-                      
+   dependencies and doesn't rely on external libraries such as LevelDB and snappy.
+
 build-type: Simple
 data-files: LICENSE, README.md
 cabal-version: >= 1.10
-tested-with: GHC == 7.6, GHC == 7.8, GHC == 7.10
+tested-with: GHC == 7.6, GHC == 7.8, GHC == 7.10, GHC == 8.6, GHC == 8.8
+             GHC == 8.10, GHCJS == 8.6
 
 library
   hs-source-dirs:      src
@@ -30,8 +31,8 @@ library
 
   exposed-modules:     Data.Bitcoin.Script
 
-  other-modules:       Data.Bitcoin.Script.Types 
-  
+  other-modules:       Data.Bitcoin.Script.Types
+
   build-depends:       base                     >= 4.3          && < 5
                      , text
                      , bytestring
