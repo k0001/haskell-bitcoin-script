@@ -3,7 +3,7 @@
 }:
 mkDerivation {
   pname = "bitcoin-script";
-  version = "0.11.1";
+  version = "0.11.2";
   src = ./.;
   buildDepends = [ base base16-bytestring binary bytestring text ];
   testDepends = [ base bytestring hspec ];
