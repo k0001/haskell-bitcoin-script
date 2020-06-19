@@ -1,2 +1,2 @@
-{ nixpkgs ? import <nixpkgs> {}, compiler ? "ghc7101" }:
-nixpkgs.haskellPackages.callPackage ./bitcoin-script.nix { }
+{ pkgs ? import (import ./nixpkgs.nix) { }, compiler ? "ghc865" }:
+pkgs.haskell.packages.${compiler}.callPackage ./bitcoin-script.nix { }
